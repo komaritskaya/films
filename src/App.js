@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
+import Films from './components/Films';
+import superman from './i/superman.jpg';
+import loneRunner from './i/lone-runner.jpg';
+import batman from './i/batman.jpg';
 import './App.css';
 
+const films = [
+  {
+    id: 'film-01',
+    poster: superman,
+    title: 'Супермен',
+    stars: 4,
+    price: 1299,
+    type: 'Экшн',
+    color: 'orange',
+    isFavorite: true,
+  },
+  {
+    id: 'film-02',
+    poster: loneRunner,
+    title: 'Одинокий странник',
+    stars: 3,
+    price: 899,
+    type: 'Вестерн',
+    color: 'brown',
+    isFavorite: false,
+  },
+  {
+    id: 'film-03',
+    poster: batman,
+    title: 'Бэтмэн',
+    stars: 5,
+    price: 1499,
+    type: 'Экшн',
+    color: 'orange',
+    isFavorite: false,
+  },
+];
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <Films list={films} />;
 }
 
 export default App;
